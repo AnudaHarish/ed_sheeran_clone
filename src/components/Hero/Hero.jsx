@@ -1,17 +1,21 @@
 import edVideo from '../../assets/videos/ednew2.mp4';
 import './Hero.css';
 import { motion } from 'framer-motion';
+import logo from '../../assets/images/logofinal.png';
+import logo2 from '../../assets/images/logonew.png';
 
 function Hero() {
   return (
     <section id="home" className="hero">
+      <img className="tab-size-img" src={logo} alt="" />
+      <img className="mob-size-img" src={logo2} alt="" />
       <video
       className='hero-video'
       src={edVideo}
       autoPlay
       muted
       loop  
-      playInline
+      playsInline
       >
       </video>
       <div className="hero-overlay"></div>
@@ -24,8 +28,8 @@ function Hero() {
           <br />
           that connect people 
         </motion.p>
-        <motion.a initial={{opacity:0, x: 100}} animate={{opacity:1, y: 0}} transition={{duration:0.8, ease:'easeOut', delay: 0.8}} href="#music" className='hero-button'>
-          Explore <span>&#8594;</span>
+        <motion.a initial={{opacity:0, x: 100}} animate={{opacity:1, x: 0}} transition={{duration:0.8, ease:'easeOut', delay: 0.8}} href="#music" className='hero-button'>
+          Explore <motion.span>&#8594;</motion.span>
         </motion.a>
       </div>
     </section>
