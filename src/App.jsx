@@ -1,11 +1,11 @@
 import './App.css';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Intro from './components/Intro';
-import Music from './components/Music';
-import Journey from './components/Journey';
-import Tour from './components/Tour';
-import Footer from './components/Footer';
+import Navbar from './components/Navbar/Navbar';
+import Hero from './components/Hero/Hero';
+import Intro from './components/Intro/Intro';
+import Music from './components/Music/Music';
+import Journey from './components/Journey/Journey';
+import Tour from './components/Tour/Tour';
+import Footer from './components/Footer/Footer';
 
 function App() {
 

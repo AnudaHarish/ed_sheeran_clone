@@ -1,4 +1,7 @@
 import { useState } from "react";
+import './Navbar.css';
+import hamburgerIcon from "../../assets/icons/hamburgerMenuIcon.svg";
+import logo from "../../assets/images/ed_logo3.png";
 
 function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -10,13 +13,13 @@ function Nav() {
   return (
     <header className="navbar">
       <a href="#home" className="logo">
-        ED&#x2e;
+        <img src={logo} alt="" />
       </a>
       <button 
       className="menu-btn" 
       onClick={() => setMenuOpen(!menuOpen)}
       aria-label="Toggle navigation">
-        <img src="../assets/icons/hamburger.png" alt="hambuger-icon" />
+        <img src={hamburgerIcon} alt="" />
       </button>
       <nav className={menuOpen ? "nav-links open" : "nav-links"}>
         <a href="#home" onClick={closeMenu}>

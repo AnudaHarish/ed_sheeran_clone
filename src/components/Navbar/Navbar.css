@@ -1,0 +1,59 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 0 6%;
+  z-index: 1000;
+  mix-blend-mode: difference;
+}
+
+.logo img{
+  width: 150px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 2rem;
+}
+
+.nav-links a {
+  position: relative;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 1px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.menu-btn img {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+
