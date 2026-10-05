@@ -1,0 +1,175 @@
+.tour {
+  min-height: 100vh;
+  padding: 140px 8% 120px;
+  background: #0d0d0d;
+  color: white;
+  overflow: hidden;
+}
+
+.tour-header {
+  margin-bottom: 100px;
+}
+
+.tour-label {
+  font-size: 12px;
+  letter-spacing: 4px;
+  margin-bottom: 30px;
+  color: #999;
+}
+
+.tour-header h2 {
+  font-size: clamp(4rem, 9vw, 9rem);
+  line-height: 0.85;
+  font-weight: 500;
+  margin: 0;
+}
+
+.tour-list {
+  border-top: 1px solid #444;
+}
+
+.tour-item {
+  display: grid;
+  grid-template-columns: 120px 1.5fr 1fr 150px;
+  align-items: center;
+  gap: 30px;
+  min-height: 130px;
+  border-bottom: 1px solid #444;
+  transition: 
+    background 0.4s ease,
+    padding 0.4s ease;
+}
+
+.tour-item:hover {
+  background: #171717;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.tour-date {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.tour-day {
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.tour-month {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #888;
+}
+
+.tour-location h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin: 0 0 8px;
+}
+
+.tour-location p {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 0;
+}
+
+.tour-country {
+  font-size: 0.8rem;
+  color: #888;
+  letter-spacing: 1px;
+}
+
+.tour-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 11px;
+}
+
+.tour-button span{
+  transition: transform 0.3s ease;
+}
+
+.tour-button:hover span {
+  transform: translateX(8px);
+}
+
+.tour-all-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 60px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid white;
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+.tour-all-btn span {
+  transition: transform 0.3s ease;
+}
+
+.tour-all-btn:hover span {
+  transform: translateX(8px);
+}
+
+@media screen and (max-width: 900px) {
+  .tour {
+    padding: 110px 7% 90px;
+  }
+
+  .tour-header {
+    margin-bottom: 70px;
+  }
+
+  .tour-item {
+    grid-template-columns: 100px 1fr auto;
+    gap: 20px;
+    padding: 25px 0;
+  }
+
+  .tour-country {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .tour {
+    padding: 100px 6% 80px;
+  }
+
+  .tour-header h2 {
+    font-size: clamp(3.5rem, 17vw, 6rem);
+  }
+
+  .tour-item {
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    min-height: auto;
+    padding: 30px 0;
+  }
+
+  .tour-date {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .tour-button {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  .tour-day {
+    font-size: 2.5rem;
+  }
+
+  .tour-location h3 {
+    font-size: 1.4rem;
+  }
+}
