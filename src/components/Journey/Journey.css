@@ -1,0 +1,159 @@
+.journey {
+  min-height: 100vh;
+  padding: 140px 8% 120px;
+  background: #111;
+  color: white;
+  overflow: hidden;
+}
+
+.journey-header {
+  margin-bottom: 120px;
+}
+
+.journey-label {
+  font-size: 12px;
+  letter-spacing: 4px;
+  margin-bottom: 30px;
+}
+
+.journey-header h2 {
+  font-size: clamp(4rem, 9vw, 9rem);
+  line-height: 0.85;
+  font-weight: 500;
+  margin: 0;
+}
+
+.journey-timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0;
+  padding-top: 40px;
+}
+
+.journey-timeline::before {
+  content: "";
+  position: absolute;
+  top: 70px;
+  right: 0;
+  left: 0;
+  height: 1px;
+  background: #555;
+}
+
+.journey-item {
+  position: relative;
+  min-height: 350px;
+  padding-right: 30px;
+}
+
+.journey-year {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #999;
+  margin-bottom: 25px;
+}
+
+.journey-symbol {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #777;
+  border-radius: 50%;
+  background: #111;
+  font-size: 25px;
+  z-index: 2;
+  transition: 
+    transform 0.4s ease,
+    background 0.4s ease;
+}
+
+.journey-item:hover .journey-symbol {
+  transform: scale(1.15);
+  background: white;
+  color: #111;
+}
+
+.journey-dot {
+  position: absolute;
+  top: 67px;
+  left: 30px;
+  width: 7px;
+  background: white;
+  border-radius: 50%;
+  z-index: 3;
+}
+
+.journey-info {
+  margin-top: 60px;
+  max-width: 200px;
+}
+
+.journey-info h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.journey-info p {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: #999;
+}
+
+@media screen and (max-width: 900px) {
+  .journey {
+    padding: 110px 7% 90px;
+  }
+
+  .journey-header {
+    margin-bottom: 80px;
+  }
+
+  .journey-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    padding-left: 40px;
+  }
+
+  .journey-timeline::before {
+    top: 0;
+    bottom: 0;
+    left: 69px;
+    width: 1px;
+    height: auto;
+  }
+
+  .journey-item {
+    min-height: auto;
+    padding-right: 0;
+    padding-left: 60px;
+  }
+
+  .journey-year {
+    margin-bottom: 15px;
+  }
+
+  .journey-symbol {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .journey-dot {
+    display: none;
+  }
+
+  .journey-info {
+    margin-top: 20px;
+    max-width: 500px;
+  }
+}
