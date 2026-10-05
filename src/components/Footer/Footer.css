@@ -1,0 +1,99 @@
+footer {
+  position: relative;
+  background-color: #232322;
+}
+
+.back-to-top {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  border: none;
+  background-color: transparent;
+  color: rgba(224, 246, 246, 0.787);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.back-to-top:hover {
+  color: rgba(0, 242, 255, 0.735);
+}
+
+.back-to-top span{
+  display: inline-block;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.back-to-top:hover span {
+  transform: scale(1.4);
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px; 
+}
+
+.footer-logo {
+  width: 300px;
+}
+
+.footer-social {
+  flex: 1;
+  display: flex;
+  justify-content: end;
+  gap: 30px;
+  color: rgb(214, 243, 245);
+}
+
+.footer-social a {
+  position: relative;
+  letter-spacing: 2px;
+}
+
+.footer-social a:hover {
+  color: rgba(0, 242, 255, 0.735);
+}
+
+.footer-social a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: rgba(0, 242, 255, 0.735);
+  transition: width 0.3s ease;
+}
+
+.footer-social a:hover::after {
+  width: 100%;
+}
+
+.footer-logo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.bottom p {
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+
+@media screen and (max-width: 900px) {
+  .top {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+}
