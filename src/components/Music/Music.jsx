@@ -1,8 +1,11 @@
 import './Music.css';
 import albums from '../../data/albums';
 import {motion} from 'framer-motion';
+import { useState } from 'react';
+import AlbumModal from '../AlbumModal/AlbumModal';
 
 function Music() {
+  const [selectedAlbum, setSelectedAlbum] = useState(null);
   return (
     <section id="music" className="music">
       <div className="music-header">
@@ -23,7 +26,10 @@ function Music() {
             viewport={{once:true, amount:0.2}}
             transition={{duration:0.7, delay: index * 0.15}}
           >
-            <div className="album-image-wrapper">
+            <div 
+              className="album-image-wrapper"
+              onClick={() => setSelectedAlbum(album)}
+            >
               <img src={album.image} alt={album.title} className='album-image'/>
               <div className="album-overlay">
                 <span>View Album &#8594;</span>
@@ -39,6 +45,10 @@ function Music() {
           </motion.article>
         ))}
       </div>
+      <AlbumModal 
+        album={selectedAlbum}
+        onClose={() => setSelectedAlbum(null)}
+      />
     </section>
   );
 }
