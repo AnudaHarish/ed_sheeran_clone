@@ -99,4 +99,9 @@ footer {
     align-items: center;
     padding-bottom: 20px;
   }
+
+  .footer-social{
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
 }
